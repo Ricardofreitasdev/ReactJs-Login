@@ -1,0 +1,88 @@
+.form-register {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background-color: $bg-color-2;
+  min-height: 500px;
+  border-radius: 16px;
+
+  @media (max-width: $v2) {
+    width: 100%;
+    flex: unset;
+    min-height: 300px;
+    padding: 16px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    min-width: 80%;
+
+    @media (max-width: $v2) {
+      min-width: 100%;
+    }
+
+    .input__wrapper {
+      position: relative;
+    }
+
+    input {
+      padding: 12px;
+      border-radius: 4px;
+      min-height: 50px;
+      margin: 5px 0;
+      background-color: $bg-color-1;
+      border: 2px solid $bg-color-1;
+      transition: $transition-fast;
+      color: $color-1;
+      font-size: 14px;
+      width: 100%;
+
+      &:hover,
+      &:focus {
+        border: 2px solid $color-2;
+      }
+    }
+
+    span {
+      text-align: center;
+      margin-top: 10px;
+      color: $color-1;
+      font-size: 12px;
+      font-weight: 200;
+
+      a {
+        font-weight: bold;
+        color: $color-2;
+        transition: $transition-fast;
+
+        &:hover {
+          color: $color-2-hover;
+        }
+      }
+    }
+  }
+
+  &__button {
+    padding: 8px;
+    border-radius: 4px;
+    min-height: 50px;
+    margin: 5px 0;
+    background-color: $color-2;
+    color: $color-1;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: $transition-fast;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+      background-color: $color-2-hover;
+    }
+  }
+}

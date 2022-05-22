@@ -1,0 +1,37 @@
+.page-404 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  h1 {
+    font-size: 250px;
+    color: $color-2;
+    position: relative;
+
+    @media (max-width: $v2) {
+      font-size: 100px;
+    }
+  }
+
+  a {
+    position: absolute;
+    top: 50px;
+    padding: 16px 32px;
+    background: $color-2;
+    border-radius: 16px;
+    text-decoration: none;
+    color: $color-1;
+  }
+}
+
+img {
+  position: absolute;
+  bottom: 0;
+  filter: blur(1px);
+
+  @media (max-width: $v2) {
+    max-width: 95%;
+  }
+}

@@ -1,0 +1,14 @@
+.login-message {
+  flex: 1;
+
+  @media (max-width: $v2) {
+    width: 100%;
+    flex: unset;
+    margin-bottom: 50px;
+  }
+
+  h1 {
+    color: $color-1;
+    text-align: center;
+  }
+}
