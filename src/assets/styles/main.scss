@@ -4,9 +4,11 @@
 @import "../../pages/Login/page-login";
 @import "../../pages/Register/page-register";
 @import "../../pages/NoMatch/page-404.scss";
+@import "../../pages/Admin/page-admin";
 
 @import "../../components/FormLogin/form-login";
 @import "../../components/FormRegister/form-register";
 @import "../../components/LoginMessage/login-message";
 @import "../../components/RegisterMessage/register-message";
 @import "../../components/InputPassword/input-password";
+@import "../../components/Dashboard/dashboard";

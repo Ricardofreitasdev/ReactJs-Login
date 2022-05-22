@@ -1,3 +1,14 @@
 .page-admin {
   padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+
+  h1 {
+    color: $color-1;
+    font-size: 50px;
+    margin-bottom: 15px;
+  }
 }

@@ -10,6 +10,7 @@ export default function Admin() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0, height: 0, transition: { duration: 0.2 } }}
     >
+      <h1>React Admin</h1>
       <Dashboard />
     </motion.div>
   );

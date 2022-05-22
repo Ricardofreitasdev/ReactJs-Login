@@ -3,18 +3,14 @@ import { useHistory } from "react-router-dom";
 import { GET_USER } from "../../GraphQL/Queries";
 import { useLazyQuery } from "@apollo/client";
 import useUserContext from "../../hooks/useUserContext";
+import { TailSpin } from "react-loader-spinner";
 
 export default function Dashboard() {
-  const { token, remove } = useUserContext();
+  const { token, Logout } = useUserContext();
 
   const [getUser, { loading }] = useLazyQuery(GET_USER);
   const [loggedUser, setloggedUser] = useState([]);
   const history = useHistory();
-
-  const logout = () => {
-    remove();
-    history.push("/login");
-  };
 
   async function User() {
     try {
@@ -34,13 +30,25 @@ export default function Dashboard() {
   }, [token]);
 
   return (
-    <div>
+    <div className="dashboard">
       {loading ? (
-        "carregando....."
+        <TailSpin color="#fff" height={30} width={30} />
       ) : (
-        <div>{loggedUser.name}, seja bem vindo</div>
+        <h2>Olá, {loggedUser.name}, curte Queen? </h2>
       )}
-      <button onClick={() => logout()}>deslogar</button>
+      <div className="dashboard__video">
+        <iframe
+          src="//www.youtube.com/embed/KXw8CRapg7k?autoplay=1&mute=1"
+          width="560"
+          height="315"
+          name="youtube embed"
+          allow="autoplay; encrypted-media"
+          allowFullScreen
+          title="vídeo queen"
+          frameBorder="0"
+        ></iframe>
+      </div>
+      <button onClick={() => Logout()}>Deseja sair?</button>
     </div>
   );
 }

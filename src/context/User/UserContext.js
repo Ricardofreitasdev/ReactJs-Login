@@ -10,6 +10,7 @@ const initialValues = {
   Login: () => {},
   Create: () => {},
   IsLogged: () => {},
+  Logout: () => {},
 };
 
 export const UserContext = createContext(initialValues);
@@ -89,14 +90,20 @@ export function UserProvider({ children }) {
     }
   }
 
+  function Logout() {
+    remove();
+    history.push("/login");
+  }
+
   return (
     <UserContext.Provider
       value={{
         Login,
+        Logout,
         IsLogged,
+        Create,
         token,
         remove,
-        Create,
         createLoading,
         loginLoading,
       }}

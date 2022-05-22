@@ -26,7 +26,7 @@ export default function FormLogin() {
         onSubmit={handleLogin}
       >
         <Form>
-          <Input name="email" title="nome" />
+          <Input name="email" title="e-mail" />
           <InputPassword name="password" />
           {loginLoading ? (
             <button className="form-login__button" type="submit">

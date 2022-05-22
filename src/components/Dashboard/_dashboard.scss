@@ -1,0 +1,52 @@
+.dashboard {
+  min-height: 350px;
+  width: 800px;
+  background-color: $bg-color-2;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  @media (max-width: $v2) {
+    width: 100%;
+  }
+
+  &__video {
+    padding: 20px 0px;
+
+    @media (max-width: $v2) {
+      width: 100%;
+    }
+
+    iframe {
+      border-radius: 16px;
+
+      @media (max-width: $v2) {
+        width: 100%;
+      }
+    }
+  }
+
+  h2 {
+    color: $color-1;
+    text-align: center;
+  }
+
+  button {
+    padding: 8px;
+    border-radius: 4px;
+    min-height: 50px;
+    margin: 5px 0;
+    background-color: $color-2;
+    color: $color-1;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: $transition-fast;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
