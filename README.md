@@ -35,7 +35,7 @@ yarn start
 
 ## Recursos
 
-### Frontend
+### Front-end
 
 - Design responsivo
 - Formulário contem validações
@@ -43,7 +43,7 @@ yarn start
 - Criação de usuário
   
 
-### Backend
+### Back-end
 
 - Backend que retorna sucesso ou erro ao logar
 - Bloqueio de usuário após limite de tentativas malsucedidas 
