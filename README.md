@@ -35,7 +35,6 @@ yarn start
 
 ## Recursos
 
-----------
 ### Frontend
 
 - Design responsivo
@@ -53,7 +52,6 @@ yarn start
 
 ## Libs utilizadas
 
-----------
 
 - @apollo/client
 - formik
