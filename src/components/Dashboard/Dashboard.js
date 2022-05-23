@@ -34,7 +34,7 @@ export default function Dashboard() {
       {loading ? (
         <TailSpin color="#fff" height={30} width={30} />
       ) : (
-        <h2>Olá, {loggedUser.name}, curte Queen? </h2>
+        <h2>Olá {loggedUser.name}, curte Queen? </h2>
       )}
       <div className="dashboard__video">
         <iframe

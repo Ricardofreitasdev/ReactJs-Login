@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import { CREATE_USER, VALID_USER_MUTATION } from "../../GraphQL/Mutations";
 import useStorage from "../../hooks/useStorage";
 import { useHistory } from "react-router-dom";
+import { Messages } from "../../utils/toastMessages";
 
 const initialValues = {
   token: null,
@@ -34,7 +35,7 @@ export function UserProvider({ children }) {
       });
 
       if (response.data) {
-        toast.success("Logado com sucesso");
+        toast.success(Messages.logado);
         setToken(response.data.valid.token);
 
         setTimeout(() => {
@@ -43,7 +44,7 @@ export function UserProvider({ children }) {
       }
     } catch (error) {
       if (error.message === "Failed to fetch") {
-        toast.error("algo deu errado, tente novamente mais tarde");
+        toast.error(Messages.error);
         return;
       }
 
@@ -64,7 +65,7 @@ export function UserProvider({ children }) {
       });
 
       if (response.data) {
-        toast.success("Usuário criado com sucesso");
+        toast.success(Messages.newUser);
         setToken(response.data.createUser.token);
 
         setTimeout(() => {
@@ -73,7 +74,7 @@ export function UserProvider({ children }) {
       }
     } catch (error) {
       if (error.message === "Failed to fetch") {
-        toast.error("algo deu errado, tente novamente mais tarde");
+        toast.error(Messages.error);
         return;
       }
 
@@ -83,7 +84,7 @@ export function UserProvider({ children }) {
 
   function IsLogged() {
     if (token) {
-      toast.success("você esta já esta logado, redirecinando...");
+      toast.success(Messages.redirect);
       setTimeout(() => {
         return history.push("/admin");
       }, 2000);
@@ -103,7 +104,6 @@ export function UserProvider({ children }) {
         IsLogged,
         Create,
         token,
-        remove,
         createLoading,
         loginLoading,
       }}
